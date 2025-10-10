@@ -3,5 +3,26 @@ section{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; 
-    gap:1px
+    gap:1px;
+    padding:20px
+}
+
+.box{
+    border-radius: 3px;
+    flex: 0 0 calc(100% / 23);
+
+}
+
+.box:nth-child(16n){
+    border: 1px solid black;
+
+}
+
+.reset{
+    background-color: rgb(6, 230, 238);
+    color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding:5px 10px;
+    margin:20px auto;
 }
