@@ -9,7 +9,7 @@ section{
 
 .box{
     border-radius: 3px;
-    flex: 0 0 calc(100% / 23);
+    flex-basis: 3.5%;
 
 }
 
