@@ -30,7 +30,12 @@ for (let i = 1; i <= gridSize  ; i++) {
 
 document.querySelectorAll('.box').forEach(box => {
     box.addEventListener('mouseover', () => {
-        box.style.backgroundColor = 'grey';
+        let letters = '0123456789ABCDEF';
+                let colors = '#';
+                for (let i = 0; i < 6; i++) {   
+                    colors += letters[Math.floor(Math.random() * 16)];
+                }
+                box.style.backgroundColor = colors;
     });
     box.style.cssText = "background: #e3f4ff; height: 10px; width: 10px; margin: 0px; padding: 8px;";
 });
@@ -58,7 +63,14 @@ gridButton.addEventListener('click', () => {
         }
         document.querySelectorAll('.box').forEach(box => {
             box.addEventListener('mouseover', () => {
-                box.style.backgroundColor = 'grey';
+                let letters = '0123456789ABCDEF';
+                let colors = '#';
+                for (let i = 0; i < 6; i++) {   
+                    colors += letters[Math.floor(Math.random() * 16)];
+                }
+                box.style.backgroundColor = colors;
+
+
             });
             box.style.cssText = "background: #e3f4ff; height: 10px; width: 10px; margin: 0px; padding: 8px;";
         });
