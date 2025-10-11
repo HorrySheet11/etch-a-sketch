@@ -18,24 +18,24 @@ section{
 
 }
 
-.reset{
+.reset, .grid-button{
     background-color: rgb(6, 230, 238);
     color: black;
     border: 1px solid black;
     border-radius: 3px;
     padding:5px 10px;
     margin:20px auto;
-    display: block;
+    display: inline-block;
     transition: all 0.3s ease;
 }
 
-.reset:hover{
+.reset:hover, .grid-button:hover{
     background-color: rgb(3, 179, 185);
     color: white;
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.reset:active{
+.reset:active, .grid-button:active{
     transform: scale(0.95);
 }
