@@ -51,8 +51,9 @@ gridButton.classList.add('grid-button');
 body.appendChild(gridButton);
 
 gridButton.addEventListener('click', () => {
-    box.style.removeProperty('opacity');
+    
     let userInput = prompt('Enter a grid size (1-100):');
+    
     if (userInput !== null) {
         userInput = parseInt(userInput);
         if (isNaN(userInput) || userInput < 1 || userInput > 100) {
