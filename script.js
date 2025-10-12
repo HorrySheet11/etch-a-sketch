@@ -30,7 +30,13 @@ for (let i = 1; i <= gridSize  ; i++) {
 
 document.querySelectorAll('.box').forEach(box => {
     box.addEventListener('mouseover', () => {
-        box.style.backgroundColor = 'grey';
+        let opacity = 0.1;
+                
+        box.style.backgroundColor = `rgba(219, 19, 0, ${opacity})`;
+        if (opacity < 1) {
+            opacity += 0.1;
+        }
+        console.log(opacity);
     });
     box.style.cssText = "background: #e3f4ff; height: 10px; width: 10px; margin: 0px; padding: 8px;";
 });
@@ -57,8 +63,17 @@ gridButton.addEventListener('click', () => {
             section.appendChild(div);
         }
         document.querySelectorAll('.box').forEach(box => {
-            box.addEventListener('mouseover', () => {
-                box.style.backgroundColor = 'grey';
+            box.addEventListener('mouseover', (event) => {
+                const hoveredDiv = event.target;
+                if(!hoveredDiv.style.opacity) {
+                    hoveredDiv.style.opacity = 0;
+                }
+                let currentOpacity = parseFloat(hoveredDiv.style.opacity);               
+                hoveredDiv.style.backgroundColor = `red`;
+                if (currentOpacity < 1) {
+                    currentOpacity += 0.1;
+                    hoveredDiv.style.opacity = currentOpacity;
+                }
             });
             box.style.cssText = "background: #e3f4ff; height: 10px; width: 10px; margin: 0px; padding: 8px;";
         });

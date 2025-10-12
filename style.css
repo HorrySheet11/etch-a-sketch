@@ -10,7 +10,7 @@ section{
 .box{
     border-radius: 3px;
     flex-basis: 3.5%;
-
+    
 }
 
 .box:nth-child(16n){
