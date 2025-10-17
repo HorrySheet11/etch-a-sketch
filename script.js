@@ -84,5 +84,6 @@ gridButton.addEventListener('click', () => {
             box.style.cssText = "background: #e3f4ff; height: 10px; width: 10px; margin: 0px; padding: 8px;";
         });
         section.style.cssText = `display: grid; grid-template-columns: repeat(${userInput}, auto); justify-content: center; gap: 0px;`;
+        
     }
 });
